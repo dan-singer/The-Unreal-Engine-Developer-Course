@@ -16,6 +16,17 @@ struct FBullCowCount
 	int32 Cows = 0;
 };
 
+//Using class gives enums there own scope, and allows you to reuse enum values, like OK
+enum class EGuessStatus 
+{
+	Invalid_Status,
+	OK,
+	Not_Isogram,
+	Wrong_Length,
+	Not_Lowercase
+};
+
+
 class FBullCowGame 
 {
 public:
@@ -24,10 +35,10 @@ public:
 	int32 GetCurrentTry() const;
 	int32 GetHiddenWordLength() const;
 	bool IsGameWon() const;
-	bool CheckGuessValidity(FString) const; //TODO make a more rich return value
+	EGuessStatus CheckGuessValidity(FString) const; 
 
 	void Reset(); //TODO make a more rich return value
-	FBullCowCount SubmitGuess(FString);
+	FBullCowCount SubmitValidGuess(FString);
 
 private:
 	//See constructor for initialization
