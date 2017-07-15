@@ -1,6 +1,13 @@
+/*
+The game logic (no view code or direct user interaction)
+The game is a simple guess the word game based on Mastermind
+*/
 #pragma once
 #include <string>
+#include <map>
+#define TMap std::map
 
+//To make syntax Unreal-friendly
 using FString = std::string;
 using int32 = int;
 
@@ -9,11 +16,17 @@ using int32 = int;
 //constexpr requires variables to be known at compile time
 
 
-//All values initialized to zero
 struct FBullCowCount 
 {
 	int32 Bulls = 0;
 	int32 Cows = 0;
+};
+
+//Simple structure to store the minimum and maximum word lengths available
+struct FWordLengthConstraints 
+{
+	int32 Min = 0;
+	int32 Max = 0;
 };
 
 //Using class gives enums there own scope, and allows you to reuse enum values, like OK
@@ -34,16 +47,23 @@ public:
 	int32 GetMaxTries() const;
 	int32 GetCurrentTry() const;
 	int32 GetHiddenWordLength() const;
+	void SetHiddenWordByLength(int32);
 	bool IsGameWon() const;
 	EGuessStatus CheckGuessValidity(FString) const; 
 
-	void Reset(); //TODO make a more rich return value
+	void Reset(); 
 	FBullCowCount SubmitValidGuess(FString);
+	FWordLengthConstraints GetLengthConstraints() const;
 
 private:
 	//See constructor for initialization
 	int32 MyCurrentTry;
-	int32 MyMaxTries;
+	int32 MyMaxWordLength;
+	int32 MyMinWordLength;
 	FString MyHiddenWord;
+	bool bIsGameWon;
+	TMap<int32, FString> MyHiddenWords;
+	bool IsIsogram(FString) const;
+	bool IsLowercase(FString) const;
 };
 
