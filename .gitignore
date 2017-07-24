@@ -259,3 +259,16 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+
+# Unreal Generated Files #
+*/Build
+*/Binaries
+*/DerivedDataCache
+*/Intermediate
+*/Saved
+Section_03/BuildingEscape/Content/StarterContent/
+Section_03/BuildingEscape/Intermediate/Build/
+
+# VS Generated Files #
+*.VC.db
