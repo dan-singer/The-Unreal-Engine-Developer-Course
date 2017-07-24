@@ -262,11 +262,11 @@ __pycache__/
 
 
 # Unreal Generated Files #
-*/Build
-*/Binaries
-*/DerivedDataCache
-*/Intermediate
-*/Saved
+**/Build/
+**/Binaries
+**/DerivedDataCache
+**/Intermediate
+**/Saved
 Section_03/BuildingEscape/Content/StarterContent/
 Section_03/BuildingEscape/Intermediate/Build/
 
