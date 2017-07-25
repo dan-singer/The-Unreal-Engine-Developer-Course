@@ -1,7 +1,6 @@
 // Copyright Dan Singer 2017
 
 #include "OpenDoor.h"
-#include "GameFramework/Actor.h"
 
 
 // Sets default values for this component's properties
