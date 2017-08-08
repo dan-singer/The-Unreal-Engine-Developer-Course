@@ -7,6 +7,7 @@
 #include "GameFramework/PlayerController.h"
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
+#include "PhysicsEngine/PhysicsHandleComponent.h"
 #include "Grabber.generated.h"
 
 
@@ -30,6 +31,8 @@ private:
 
 	//How far ahead of the player can we reach in cm
 	float Reach = 100.f;
-		
+	
+	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+	//UPhysicsHandle
 	
 };
