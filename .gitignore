@@ -267,7 +267,8 @@ __pycache__/
 **/DerivedDataCache
 **/Intermediate
 **/Saved
-Section_03/BuildingEscape/Content/StarterContent/
+Section_03/BuildingEscape/Content/StarterContent/Textures
+Section_03/BuildingEscape/Content/StarterContent/HDRI
 Section_03/BuildingEscape/Intermediate/Build/
 
 # VS Generated Files #
