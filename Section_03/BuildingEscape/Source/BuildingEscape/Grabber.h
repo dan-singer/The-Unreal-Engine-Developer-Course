@@ -48,4 +48,9 @@ private:
 
 	//Return hit for first physics body in reach
 	FHitResult GetFirstPhysicsBodyInReach() const;
+
+	//Get the vector representing the beginning of our raycast used for grabbing objects
+	FVector GetLineTraceStart() const;
+	//Get the vector representing the end of our raycast used for grabbing objects
+	FVector GetLineTraceEnd() const;
 };

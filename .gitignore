@@ -273,3 +273,6 @@ Section_03/BuildingEscape/Intermediate/Build/
 
 # VS Generated Files #
 *.VC.db
+*.suo
+*.VC.opendb
+*.sln
