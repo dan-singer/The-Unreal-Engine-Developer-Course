@@ -8,6 +8,7 @@
 #include "Engine/World.h"
 #include "DrawDebugHelpers.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "Components/PrimitiveComponent.h"
 #include "Grabber.generated.h"
 
 
@@ -37,4 +38,14 @@ private:
 
 	//Ray-cast and grab what's in reach
 	void Grab();
+	//Let go of what we grabbed, if anything
+	void Release();
+
+	//Find (assumed) attached physics handle 
+	void FindPhysicsHandleComponent();
+	//Setup (assumed) attached input component
+	void SetupInputComponent();
+
+	//Return hit for first physics body in reach
+	FHitResult GetFirstPhysicsBodyInReach() const;
 };
