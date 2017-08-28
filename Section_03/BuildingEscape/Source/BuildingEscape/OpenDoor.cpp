@@ -57,7 +57,6 @@ float UOpenDoor::GetTotalMassOfActorsOnPlate()
 	//Iterate through them, adding their masses
 	for (const AActor* Actor: OverlappingActors) //const AActor* Actor : OverlappingActors  -->This is the correct way to make Actor constant with auto: https://community.gamedev.tv/t/iterating-over-tarray-with-for/9404
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Overlapping %s"), *Actor->GetName());
 		TotalMass += Actor->FindComponentByClass<UPrimitiveComponent>()->GetMass();
 	}
 	return TotalMass;
